@@ -1,23 +1,117 @@
 aid: loft-labs
+
 name: Loft Labs
-description: 'Loft Labs is a company surfaced via the API Evangelist harvest backlog (source: tag-qc)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/68994d4ecac027f80ff70510/692cf1d4d7bea7f25053a45c_Blank%20Open%20Graph.png
+
+description: Loft Labs, now operating as vCluster Labs, provides a platform for AI cloud providers to deliver managed Kubernetes, Slurm, and inference
+  clusters with tenant isolation. Their solution enables turnkey AI infrastructure, offering both bare‑metal and virtual machine provisioning,
+  multi‑tenant management, capacity planning, and observability. The company targets AI cloud providers, enterprises, and hyperscalers seeking
+  scalable, secure compute clusters, and also offers vMetal to expose physical resources as a cloud service.
+
 url: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
-- Company
-apis: []
+- AI
+- Cloud
+- Kubernetes
+- Multi-tenant
+- Infrastructure
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/loft-labs-plans-pricing.yml
+- type: Spectral
+  url: rules/loft-labs-rules.yml
+- type: CLI
+  url: cli/loft-labs-cli.yml
+- type: Authentication
+  url: authentication/loft-labs-authentication.yml
+- type: Conformance
+  url: conformance/loft-labs-conformance.yml
+- type: LLMsTxt
+  url: llms/loft-labs-llms.txt
+- type: WellKnown
+  url: well-known/loft-labs-well-known.yml
+- type: Hosts
+  url: hosts/loft-labs-hosts.yml
+- type: Vendors
+  url: vendors/loft-labs-vendors.yml
+- type: TermsOfService
+  url: https://www.vcluster.com/legal/terms
+- type: Security
+  url: https://www.vcluster.com/tags/security
+- type: PrivacyPolicy
+  url: https://www.vcluster.com/legal/privacy
+- type: GitHubOrganization
+  url: https://github.com/loft-sh
+- type: ChangeLog
+  url: https://www.vcluster.com/releases
+- type: DomainSecurity
+  url: security/loft-labs-domain-security.yml
 - type: Website
   url: https://www.loft.sh
+- type: Documentation
+  url: https://www.vcluster.com/docs
+- type: GettingStarted
+  url: https://www.vcluster.com/docs/getting-started
+- type: Pricing
+  url: https://www.vcluster.com/pricing
+- type: Blog
+  url: https://www.vcluster.com/blog
+
+apis:
+- aid: loft-labs:platform-api
+  name: Loft Labs vCluster Platform API
+  description: 'Loft Labs vCluster Platform API as documented publicly: 11 operations. Contract generated from the documentation by API Evangelist
+    (2026-10-13); not the provider''s own document.'
+  humanURL: https://www.vcluster.com/docs/platform
+  baseURL: https://github.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/loft-labs-platform-openapi-generated.yml
+    x-provenance: generated
+- aid: loft-labs:vcluster-api
+  name: Loft Labs vCluster API
+  description: 'Loft Labs vCluster API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
+    not the provider''s own document.'
+  humanURL: https://www.vcluster.com/docs/vcluster
+  baseURL: https://github.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/loft-labs-vcluster-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract was found despite probing known API hosts.
+  evidence:
+  - url: https://api.vcluster.com/openapi.json
+    status: 0
+  checked: '2026-10-13'
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 16
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

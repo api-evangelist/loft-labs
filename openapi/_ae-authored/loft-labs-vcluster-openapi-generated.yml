@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: Loft Labs vCluster API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 4 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Loft Labs has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -1
+    pages-with-code: 27
+    pages-read: 27
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+  - https://www.vcluster.com/docs/vcluster/quick-start/docker
+  x-docs-section: vcluster
+servers:
+- url: https://github.com
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://www.vcluster.com/docs/vcluster/quick-start/docker
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost \n macOS limitation On macOS with Docker Desktop or Rancher Desktop, the LoadBalancer IP will not be assigned.\
+          \ Docker runs inside a Linux VM and the bridge network IP is not routable on the macOS host. Use kubectl port-forward instead: kubectl\
+          \ port-forward deployment/hello 8080:80 curl http://localhost:8080 \n Add virtual worker nodes ​ \n Test node affinity rules, DaemonSet\
+          \ sch"
+  /loft-sh/vcluster/releases/download/{downloadid}/install-standalone.sh:
+    get:
+      operationId: get_loft_sh_vcluster_releases_download_downloadid_install_standalone_sh
+      tags:
+      - Loft Sh
+      summary: GET /loft-sh/vcluster/releases/download/v0.35.0/install-standalone.sh
+      x-source: https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+      parameters:
+      - name: downloadid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sfL https://github.com/loft-sh/vcluster/releases/download/v0.35.0/install-standalone.sh \ | sh -s -- --vcluster-name standalone
+          note vCluster deploys Kubernetes v1.36.0 by default. To use a different version, set controlPlane.distro.k8s.image.tag in your vcluster.yaml
+          . The installer downloads Kubernetes binaries, configures the control plane, and writes a kubeconfig to /var/lib/vcluster/kub
+        collapsed_from: 4 example path(s) differing only at downloadId
+  /loft-sh/vcluster/releases/latest/download/{downloadid}:
+    get:
+      operationId: get_loft_sh_vcluster_releases_latest_download_downloadid
+      tags:
+      - Loft Sh
+      summary: GET /loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64
+      x-source: https://www.vcluster.com/docs/vcluster/quick-start/docker
+      parameters:
+      - name: downloadid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64" && sudo install -c -m
+          0755 vcluster /usr/local/bin && rm -f vcluster curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-arm64"
+          && sudo install -c -m 0755 vcluster /usr/local/bin && rm -f vcluster curl -L -o vcluster "https://github.com/loft-sh/vclu
+        collapsed_from: 4 example path(s) differing only at downloadId
+  /node/join:
+    get:
+      operationId: get_node_join
+      tags:
+      - Node
+      summary: GET /node/join
+      x-source: https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+      parameters:
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sfLk https://vcluster-endpoint/node/join?token=token | sh - -- --force-join Edit this page Previous Create Snapshots Next
+          Velero Restore existing tenant cluster from a snapshot Restore tenant clusters from OCI Restore tenant clusters from S3 Restore tenant
+          clusters from Azure Blob Restore tenant clusters from container Restore a standalone vCluster Restore a standalone vCluster in HA mode
+          Cl
+security:
+- bearer: []
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+tags:
+- name: Api
+- name: Loft Sh
+- name: Node

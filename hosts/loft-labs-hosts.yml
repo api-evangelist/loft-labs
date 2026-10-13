@@ -1,0 +1,129 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 3
+  other_domain: 5
+  platform: 1
+  roles:
+  - api
+  - docs
+  - other
+  - partner
+  - source
+  - website
+hosts:
+- host: api.loft.sh
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: loft.sh
+  role: api
+  relation: own
+- host: api.vcluster.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: vcluster.com
+  role: api
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  - apis[]
+  - vendor-detect
+  types:
+  - GitHubOrganization
+  serves:
+  - api
+  - hosting
+  vendor: github-pages
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: partners.vcluster.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: vCluster Partner Deal Registration
+  status: 200
+  registrable_domain: vcluster.com
+  role: partner
+  relation: other-domain
+- host: slack.loft.sh
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: loft.sh
+  role: other
+  relation: own
+- host: www.loft.sh
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: loft.sh
+  role: website
+  relation: own
+- host: www.vcluster.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Security
+  - PrivacyPolicy
+  - ChangeLog
+  - Documentation
+  - GettingStarted
+  - Pricing
+  - Blog
+  serves:
+  - docs
+  - hosting
+  vendor: netlify
+  registrable_domain: vcluster.com
+  role: docs
+  relation: other-domain
+- host: www.vmetal.ai
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: vmetal.ai
+  role: other
+  relation: other-domain
+- host: www.vnode.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: vnode.com
+  role: other
+  relation: other-domain

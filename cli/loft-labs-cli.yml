@@ -1,0 +1,57 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.vcluster.com/docs/vcluster/learn-how-to/cli-kubectl
+sources:
+- https://www.vcluster.com/docs/vcluster/learn-how-to/cli-kubectl
+- https://www.vcluster.com/docs/vcluster/cli/vcluster_certs
+- https://www.vcluster.com/docs/vcluster/reference/migrations/loft-cli-vcluster-cli-migration
+- https://www.vcluster.com/docs/platform/install/quick-start-guide
+install:
+- method: Homebrew (macOS Intel/AMD)
+  command: brew install loft-sh/tap/vcluster
+- method: Homebrew (macOS Silicon/ARM)
+  command: brew install loft-sh/tap/vcluster
+- method: Curl (macOS Intel/AMD)
+  command: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64" && sudo install -c -m 0755
+    vcluster /usr/local/bin && rm -f vcluster
+- method: Curl (macOS ARM)
+  command: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-arm64" && sudo install -c -m 0755
+    vcluster /usr/local/bin && rm -f vcluster
+- method: Curl (Linux AMD64)
+  command: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-amd64" && sudo install -c -m 0755
+    vcluster /usr/local/bin && rm -f vcluster
+- method: Curl (Linux ARM64)
+  command: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-linux-arm64" && sudo install -c -m 0755
+    vcluster /usr/local/bin && rm -f vcluster
+- method: PowerShell (Windows)
+  command: md -Force "$Env:APPDATA\vcluster"; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls,Tls11,Tls12';
+    Invoke-WebRequest -URI "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-windows-amd64.exe" -o $Env:APPDATA\vcluster\vcluster.exe;
+    $env:Path += ";" + $Env:APPDATA + "\vcluster"; [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::User)
+commands:
+- group: platform
+  commands:
+  - vcluster platform start
+  - vcluster platform start --context <cluster>
+  - vcluster platform start --namespace <namespace>
+  - vcluster platform start --version <version>
+  - vcluster platform login
+  - vcluster platform reset password
+- group: vcluster
+  commands:
+  - vcluster list
+  - vcluster create <name>
+  - vcluster delete <name>
+  - vcluster connect <name>
+  - vcluster connect <name> --print
+  - vcluster pause
+  - vcluster resume
+  - vcluster version
+  - vcluster --version
+- group: certs
+  commands:
+  - vcluster certs check
+  - vcluster certs rotate-ca
+  - vcluster certs rotate
+binary: vcluster
+docs: https://www.vcluster.com/docs/vcluster/learn-how-to/cli-kubectl

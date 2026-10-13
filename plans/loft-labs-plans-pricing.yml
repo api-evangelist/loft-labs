@@ -1,0 +1,21 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.vcluster.com/pricing
+sources:
+- https://www.vcluster.com/pricing
+name: Loft Labs pricing
+audience: business-product
+pricing_basis: flat-platform
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  description: Run and manage virtual clusters for your team using a production‑grade platform. Unlimited virtual clusters for up to 64 CPUs or
+    32 GPUs, and max 1 HA.
+- name: Enterprise
+  price_text: Chat with Sales
+  description: 'An enterprise plan for maximum security, scalability, and cost & compliance controls: Enterprise Security, Compliance & Cost Controls
+    (SSO, Quotas, Auto Sleep) Multi‑Region and Air‑Gapped deployments Enterprise Integrations (Istio, Argo, KubeVirt) External Databases as backing
+    store Enterprise Support, SLAs, and custom terms.'
+docs: https://www.vcluster.com/pricing

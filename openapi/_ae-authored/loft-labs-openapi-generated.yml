@@ -1,0 +1,321 @@
+openapi: 3.1.0
+info:
+  title: Loft Labs API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 15 operation(s) read from 27 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Loft Labs has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -1
+    pages-with-code: 27
+    pages-read: 27
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.vcluster.com/docs/platform/api/resources/nodeprovider
+  - https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+  - https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+  - https://www.vcluster.com/docs/vcluster/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/platform/install/quick-start-guide
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/platform/api/resources/appinstance
+  - https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+  - https://www.vcluster.com/docs/platform/api/resources/apps
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+  - https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+  - https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+servers:
+- url: https://github.com
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://www.vcluster.com/docs/vcluster/quick-start/docker
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost \n macOS limitation On macOS with Docker Desktop or Rancher Desktop, the LoadBalancer IP will not be assigned.\
+          \ Docker runs inside a Linux VM and the bridge network IP is not routable on the macOS host. Use kubectl port-forward instead: kubectl\
+          \ port-forward deployment/hello 8080:80 curl http://localhost:8080 \n Add virtual worker nodes ​ \n Test node affinity rules, DaemonSet\
+          \ sch"
+  /healthz:
+    get:
+      operationId: get_healthz
+      tags:
+      - Healthz
+      summary: GET /healthz
+      x-source: https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://my-cluster-endpoint.com/healthz -I --insecure HTTP/2 200 date: Mon, 30 Aug 2021 08:40:20 GMT access-control-allow-headers:\
+          \ * access-control-allow-methods: POST, GET, OPTIONS, PUT, DELETE, PATCH access-control-allow-origin: * cache-control: no-cache, private\
+          \ strict-transport-security: max-age=15724800; includeSubDomains \n Enable a regional cluster endpoint ​ \n To configure the platform"
+  /kubernetes/cluster/api/v1/namespaces:
+    get:
+      operationId: get_kubernetes_cluster_api_v1_namespaces
+      tags:
+      - Kubernetes
+      summary: Regional Cluster Endpoints
+      x-source: https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/apps/my-app:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_apps_my_app
+      tags:
+      - Kubernetes
+      summary: App
+      x-source: https://www.vcluster.com/docs/platform/api/resources/apps
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/argocdapplicationtemplates/app-template:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_argocdapplicationtemplates_
+      tags:
+      - Kubernetes
+      summary: Retrieve a single ArgoCDApplicationTemplate by name
+      x-source: https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/clusteraccesses/my-cluster-access:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_clusteraccesses_my_cluster_
+      tags:
+      - Kubernetes
+      summary: Cluster Access
+      x-source: https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_app
+      tags:
+      - Kubernetes
+      summary: App Instance
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstance
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd/log:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_app
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd/log
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl Run the following command: # Exchange my-argo-cd in the url below with the name of the AppInstance kubectl get --raw "/kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd/log"
+          Run the following curl command: # Exchange my-argo-cd in the url below with the name of the AppInstance curl -s -X GET --insecure \
+          "https://$LOFT_DOMAIN/kubernetes/managemen'
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/argocdapplications/shared-infra:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_arg
+      tags:
+      - Kubernetes
+      summary: ArgoCD Application
+      x-source: https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/{pmyprojectid}:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_pmy
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstance
+      parameters:
+      - name: pmyprojectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to retrieve AppInstances. \n kubectl curl Retrieve a list of AppInstances ​ Run the following command to list\
+          \ all AppInstances in project my-project : kubectl get appinstances.management.loft.sh -n p-my-project -o yaml Retrieve a single AppInstance\
+          \ by name ​ Run the following kubectl command to get AppInstance my-argo-cd in project my-project : kubectl get appinstances.management.lo"
+        collapsed_from: 2 example path(s) differing only at pmyprojectId
+  /kubernetes/management/apis/management.loft.sh/v1/{v1id}:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_v1id
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/apps
+      x-source: https://www.vcluster.com/docs/platform/api/resources/apps
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to retrieve Apps. \n kubectl curl Retrieve a list of Apps ​ Run the following command to list all Apps: kubectl\
+          \ get apps.management.loft.sh -o yaml Retrieve a single App by name ​ Run the following kubectl command to get App my-app : kubectl\
+          \ get apps.management.loft.sh my-app -o yaml Retrieve a list of Apps ​ Run the following curl command to list all Apps: curl -s \"https://$LOFT_DO"
+        collapsed_from: 4 example path(s) differing only at v1Id
+    post:
+      operationId: post_kubernetes_management_apis_management_loft_sh_v1_v1id
+      tags:
+      - Kubernetes
+      summary: POST /kubernetes/management/apis/management.loft.sh/v1/clusterroletemplates
+      x-source: https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to create a new ClusterRoleTemplate. \n kubectl curl Create a file object.yaml with the following contents:\
+          \ apiVersion : management.loft.sh/v1 kind : ClusterRoleTemplate metadata : { } spec : access : - users : - '*' verbs : - get clusterRoleTemplate\
+          \ : metadata : { } rules : - apiGroups : - management.loft.sh resources : - spaceinstances - virtualclusterinstances verbs : - get -\
+          \ lis"
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /loft-sh/vcluster/releases/download/{downloadid}/install-standalone.sh:
+    get:
+      operationId: get_loft_sh_vcluster_releases_download_downloadid_install_standalone_sh
+      tags:
+      - Loft Sh
+      summary: GET /loft-sh/vcluster/releases/download/v0.35.0/install-standalone.sh
+      x-source: https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+      parameters:
+      - name: downloadid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sfL https://github.com/loft-sh/vcluster/releases/download/v0.35.0/install-standalone.sh \ | sh -s -- --vcluster-name standalone
+          note vCluster deploys Kubernetes v1.36.0 by default. To use a different version, set controlPlane.distro.k8s.image.tag in your vcluster.yaml
+          . The installer downloads Kubernetes binaries, configures the control plane, and writes a kubeconfig to /var/lib/vcluster/kub
+        collapsed_from: 4 example path(s) differing only at downloadId
+  /loft-sh/vcluster/releases/latest/download/{downloadid}:
+    get:
+      operationId: get_loft_sh_vcluster_releases_latest_download_downloadid
+      tags:
+      - Loft Sh
+      summary: GET /loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64
+      x-source: https://www.vcluster.com/docs/vcluster/quick-start/docker
+      parameters:
+      - name: downloadid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-amd64" && sudo install -c -m
+          0755 vcluster /usr/local/bin && rm -f vcluster curl -L -o vcluster "https://github.com/loft-sh/vcluster/releases/latest/download/vcluster-darwin-arm64"
+          && sudo install -c -m 0755 vcluster /usr/local/bin && rm -f vcluster curl -L -o vcluster "https://github.com/loft-sh/vclu
+        collapsed_from: 4 example path(s) differing only at downloadId
+  /node/join:
+    get:
+      operationId: get_node_join
+      tags:
+      - Node
+      summary: GET /node/join
+      x-source: https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+      parameters:
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sfLk https://vcluster-endpoint/node/join?token=token | sh - -- --force-join Edit this page Previous Create Snapshots Next
+          Velero Restore existing tenant cluster from a snapshot Restore tenant clusters from OCI Restore tenant clusters from S3 Restore tenant
+          clusters from Azure Blob Restore tenant clusters from container Restore a standalone vCluster Restore a standalone vCluster in HA mode
+          Cl
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Healthz
+- name: Kubernetes
+- name: Loft Sh
+- name: Node

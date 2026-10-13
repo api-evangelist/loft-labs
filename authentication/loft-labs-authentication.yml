@@ -1,0 +1,16 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/control-plane/components/backing-store/database/external
+sources:
+- https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/control-plane/components/backing-store/database/external
+- https://www.vcluster.com/docs/platform/administer/authentication/oidc-provider
+- https://www.vcluster.com/docs/vcluster
+- https://www.vcluster.com/docs/vcluster/quick-start/shared-nodes
+description: Authentication schemes published for Loft Labs vCluster
+schemes:
+- type: oauth2
+  name: vCluster Platform OIDC
+  evidence: vCluster Platform can act as an OpenID Connect provider for other services, e.g. a self-hosted container registry using Harbor .
+  how_to_obtain: Configure OIDC clients with clientId and clientSecret in the vCluster Platform configuration or via Kubernetes secrets.
+docs: https://www.vcluster.com/docs/vcluster/configure/vcluster-yaml/control-plane/components/backing-store/database/external

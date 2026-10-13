@@ -1,0 +1,26 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.vcluster.com/docs/vcluster/security
+sources:
+- https://www.vcluster.com/docs/vcluster/security
+- https://www.vcluster.com/docs/vcluster/security/shared-nodes-hardening
+- https://www.vcluster.com/docs/vcluster/security/shared-nodes-admission-examples
+- https://www.vcluster.com/docs/vcluster/deploy/control-plane/kubernetes-pod/security/fips
+standards:
+- id: fapi
+  conforms: false
+  evidence: FIPS 140-2 is a U.S. Federal Government security standard used to approve cryptographic modules.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: bearer (http)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://www.vcluster.com/docs/vcluster/security
