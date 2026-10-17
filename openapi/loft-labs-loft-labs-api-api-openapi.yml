@@ -1,0 +1,70 @@
+openapi: 3.2.0
+info:
+  title: Loft Labs API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 15 operation(s) read from 27 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Loft Labs has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -1
+    pages-with-code: 27
+    pages-read: 27
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.vcluster.com/docs/platform/api/resources/nodeprovider
+  - https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+  - https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+  - https://www.vcluster.com/docs/vcluster/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/platform/install/quick-start-guide
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/platform/api/resources/appinstance
+  - https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+  - https://www.vcluster.com/docs/platform/api/resources/apps
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+  - https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+  - https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+servers:
+- url: https://github.com
+security:
+- bearer: []
+tags:
+- name: Loft Labs API
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Loft Labs API
+      summary: GET /
+      x-source: https://www.vcluster.com/docs/vcluster/quick-start/docker
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost \n macOS limitation On macOS with Docker Desktop or Rancher Desktop, the LoadBalancer IP will not be assigned. Docker runs inside a Linux VM and the bridge network IP is not routable on the macOS host. Use kubectl port-forward instead: kubectl port-forward deployment/hello 8080:80 curl http://localhost:8080 \n Add virtual worker nodes ​ \n Test node affinity rules, DaemonSet sch"
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

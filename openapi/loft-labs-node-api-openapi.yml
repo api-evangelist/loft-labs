@@ -1,0 +1,76 @@
+openapi: 3.2.0
+info:
+  title: Loft Labs Node API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 15 operation(s) read from 27 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Loft Labs has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -1
+    pages-with-code: 27
+    pages-read: 27
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.vcluster.com/docs/platform/api/resources/nodeprovider
+  - https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+  - https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+  - https://www.vcluster.com/docs/vcluster/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/platform/install/quick-start-guide
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/platform/api/resources/appinstance
+  - https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+  - https://www.vcluster.com/docs/platform/api/resources/apps
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+  - https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+  - https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+servers:
+- url: https://github.com
+security:
+- bearer: []
+tags:
+- name: Node
+paths:
+  /node/join:
+    get:
+      operationId: get_node_join
+      tags:
+      - Node
+      summary: GET /node/join
+      x-source: https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+      parameters:
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sfLk https://vcluster-endpoint/node/join?token=token | sh - -- --force-join Edit this page Previous Create Snapshots Next Velero Restore existing tenant cluster from a snapshot Restore tenant clusters from OCI Restore tenant clusters from S3 Restore tenant clusters from Azure Blob Restore tenant clusters from container Restore a standalone vCluster Restore a standalone vCluster in HA mode Cl
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

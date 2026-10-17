@@ -80,27 +80,56 @@ common:
   url: https://www.vcluster.com/blog
 
 apis:
-- aid: loft-labs:platform-api
-  name: Loft Labs vCluster Platform API
-  description: 'Loft Labs vCluster Platform API as documented publicly: 11 operations. Contract generated from the documentation by API Evangelist
-    (2026-10-13); not the provider''s own document.'
+- aid: loft-labs:loft-labs-healthz-api
+  name: Loft Labs Healthz API
+  description: The Healthz API from Loft Labs — 1 operation(s) for healthz.
   humanURL: https://www.vcluster.com/docs/platform
   baseURL: https://github.com
+  tags:
+  - Healthz
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/loft-labs-platform-openapi-generated.yml
-    x-provenance: generated
-- aid: loft-labs:vcluster-api
-  name: Loft Labs vCluster API
-  description: 'Loft Labs vCluster API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
-    not the provider''s own document.'
-  humanURL: https://www.vcluster.com/docs/vcluster
+    url: openapi/loft-labs-healthz-api-openapi.yml
+- aid: loft-labs:loft-labs-kubernetes-api
+  name: Loft Labs Kubernetes API
+  description: The Kubernetes API from Loft Labs — 9 operation(s) for kubernetes.
+  humanURL: https://www.vcluster.com/docs/platform
   baseURL: https://github.com
+  tags:
+  - Kubernetes
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/loft-labs-vcluster-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/loft-labs-kubernetes-api-openapi.yml
+- aid: loft-labs:loft-labs-loft-labs-api-api
+  name: Loft Labs Loft Labs API
+  description: The Loft Labs API API from Loft Labs — 1 operation(s) for loft labs api.
+  humanURL: https://www.vcluster.com/docs/platform
+  baseURL: https://github.com
+  tags:
+  - Loft Labs API
+  properties:
+  - type: OpenAPI
+    url: openapi/loft-labs-loft-labs-api-api-openapi.yml
+- aid: loft-labs:loft-labs-loft-sh-api
+  name: Loft Labs Loft Sh API
+  description: The Loft Sh API from Loft Labs — 2 operation(s) for loft sh.
+  humanURL: https://www.vcluster.com/docs/platform
+  baseURL: https://github.com
+  tags:
+  - Loft Sh
+  properties:
+  - type: OpenAPI
+    url: openapi/loft-labs-loft-sh-api-openapi.yml
+- aid: loft-labs:loft-labs-node-api
+  name: Loft Labs Node API
+  description: The Node API from Loft Labs — 1 operation(s) for node.
+  humanURL: https://www.vcluster.com/docs/platform
+  baseURL: https://github.com
+  tags:
+  - Node
+  properties:
+  - type: OpenAPI
+    url: openapi/loft-labs-node-api-openapi.yml
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

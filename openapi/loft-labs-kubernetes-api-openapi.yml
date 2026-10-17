@@ -1,0 +1,206 @@
+openapi: 3.2.0
+info:
+  title: Loft Labs Kubernetes API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 15 operation(s) read from 27 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Loft Labs has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -1
+    pages-with-code: 27
+    pages-read: 27
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.vcluster.com/docs/platform/api/resources/nodeprovider
+  - https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+  - https://www.vcluster.com/docs/vcluster/manage/backup-restore/restore
+  - https://www.vcluster.com/docs/vcluster/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/platform/install/quick-start-guide
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/docker
+  - https://www.vcluster.com/docs/vcluster/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/standalone
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/next/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/shared-nodes
+  - https://www.vcluster.com/docs/vcluster/0.35.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/vcluster/0.36.0/quick-start/private-nodes
+  - https://www.vcluster.com/docs/platform/api/resources/appinstance
+  - https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+  - https://www.vcluster.com/docs/platform/api/resources/apps
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+  - https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+  - https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+  - https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+servers:
+- url: https://github.com
+security:
+- bearer: []
+tags:
+- name: Kubernetes
+paths:
+  /kubernetes/cluster/api/v1/namespaces:
+    get:
+      operationId: get_kubernetes_cluster_api_v1_namespaces
+      tags:
+      - Kubernetes
+      summary: Regional Cluster Endpoints
+      x-source: https://www.vcluster.com/docs/platform/administer/clusters/advanced/regional-cluster-endpoints
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/apps/my-app:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_apps_my_app
+      tags:
+      - Kubernetes
+      summary: App
+      x-source: https://www.vcluster.com/docs/platform/api/resources/apps
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/argocdapplicationtemplates/app-template:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_argocdapplicationtemplates_
+      tags:
+      - Kubernetes
+      summary: Retrieve a single ArgoCDApplicationTemplate by name
+      x-source: https://www.vcluster.com/docs/platform/api/resources/argocdapplicationtemplate
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/clusteraccesses/my-cluster-access:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_clusteraccesses_my_cluster_
+      tags:
+      - Kubernetes
+      summary: Cluster Access
+      x-source: https://www.vcluster.com/docs/platform/api/resources/clusteraccess
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_app
+      tags:
+      - Kubernetes
+      summary: App Instance
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstance
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd/log:
+    get:
+      operationId: getKubernetesManagementApisManagementLoftShV1NamespacesPMyProjectAppinstancesMyArgoCdLog
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/ap…
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstancelog
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl Run the following command: # Exchange my-argo-cd in the url below with the name of the AppInstance kubectl get --raw "/kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/appinstances/my-argo-cd/log" Run the following curl command: # Exchange my-argo-cd in the url below with the name of the AppInstance curl -s -X GET --insecure \ "https://$LOFT_DOMAIN/kubernetes/managemen'
+      x-operation-id-source: normalized
+      x-operation-id-original: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_app
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/argocdapplications/shared-infra:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_arg
+      tags:
+      - Kubernetes
+      summary: ArgoCD Application
+      x-source: https://www.vcluster.com/docs/platform/api/resources/argocdapplication
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/{pmyprojectid}:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_namespaces_p_my_project_pmy
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/namespaces/p-my-project/ap…
+      x-source: https://www.vcluster.com/docs/platform/api/resources/appinstance
+      parameters:
+      - name: pmyprojectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to retrieve AppInstances. \n kubectl curl Retrieve a list of AppInstances ​ Run the following command to list all AppInstances in project my-project : kubectl get appinstances.management.loft.sh -n p-my-project -o yaml Retrieve a single AppInstance by name ​ Run the following kubectl command to get AppInstance my-argo-cd in project my-project : kubectl get appinstances.management.lo"
+        collapsed_from: 2 example path(s) differing only at pmyprojectId
+  /kubernetes/management/apis/management.loft.sh/v1/{v1id}:
+    get:
+      operationId: get_kubernetes_management_apis_management_loft_sh_v1_v1id
+      tags:
+      - Kubernetes
+      summary: GET /kubernetes/management/apis/management.loft.sh/v1/apps
+      x-source: https://www.vcluster.com/docs/platform/api/resources/apps
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to retrieve Apps. \n kubectl curl Retrieve a list of Apps ​ Run the following command to list all Apps: kubectl get apps.management.loft.sh -o yaml Retrieve a single App by name ​ Run the following kubectl command to get App my-app : kubectl get apps.management.loft.sh my-app -o yaml Retrieve a list of Apps ​ Run the following curl command to list all Apps: curl -s \"https://$LOFT_DO"
+        collapsed_from: 4 example path(s) differing only at v1Id
+    post:
+      operationId: post_kubernetes_management_apis_management_loft_sh_v1_v1id
+      tags:
+      - Kubernetes
+      summary: POST /kubernetes/management/apis/management.loft.sh/v1/clusterroletemplates
+      x-source: https://www.vcluster.com/docs/platform/api/resources/clusterroletemplate
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl or kubectl to create a new ClusterRoleTemplate. \n kubectl curl Create a file object.yaml with the following contents: apiVersion : management.loft.sh/v1 kind : ClusterRoleTemplate metadata : { } spec : access : - users : - '*' verbs : - get clusterRoleTemplate : metadata : { } rules : - apiGroups : - management.loft.sh resources : - spaceinstances - virtualclusterinstances verbs : - get - lis"
+        collapsed_from: 2 example path(s) differing only at v1Id
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

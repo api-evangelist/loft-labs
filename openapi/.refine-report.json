@@ -1,0 +1,28 @@
+{
+  "provider": "loft-labs",
+  "sources": [
+    "_ae-authored/loft-labs-openapi-generated.yml"
+  ],
+  "outputs": [
+    "loft-labs-healthz-api-openapi.yml",
+    "loft-labs-kubernetes-api-openapi.yml",
+    "loft-labs-loft-labs-api-api-openapi.yml",
+    "loft-labs-loft-sh-api-openapi.yml",
+    "loft-labs-node-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "2 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "loft-labs-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "loft-labs-openapi-generated.yml: tagged paths GET / -> Loft Labs API",
+    "loft-labs-openapi-generated.yml: declared missing tag: Loft Labs API",
+    "apis.yml register: written (+5 apis, 5 total)"
+  ],
+  "skipped": [
+    "_ae-authored/loft-labs-vcluster-openapi-generated.yml: archived document superseded by a larger archived document",
+    "_ae-authored/loft-labs-platform-openapi-generated.yml: archived document superseded by a larger archived document"
+  ]
+}
