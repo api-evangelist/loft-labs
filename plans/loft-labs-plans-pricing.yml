@@ -19,3 +19,22 @@ plans:
     (SSO, Quotas, Auto Sleep) Multi‑Region and Air‑Gapped deployments Enterprise Integrations (Istio, Argo, KubeVirt) External Databases as backing
     store Enterprise Support, SLAs, and custom terms.'
 docs: https://www.vcluster.com/pricing
+x-canonical:
+  generated: '2026-10-23'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
